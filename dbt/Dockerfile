@@ -3,7 +3,7 @@ WORKDIR /dbt
 COPY . ./
 
 # TODO
-ENV GCP_PROJECT=dtc-de-zoomcamp-2023
+ENV GCP_PROJECT=yelposphere2
 
 ENV DBT_DATASET=yelp_dbt
 ENV PORT=8080
