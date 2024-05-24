@@ -1,12 +1,12 @@
-project_id     = "dtc-de-zoomcamp-2023" // TODO
-region         = "asia-south1" // TODO
+project_id     = "yelposphere2" // TODO
+region         = "europe-central2" // TODO
 
 # Change credentials to point to your service account JSON file (if not using GOOGLE_APPLICATION_CREDENTIALS environment variable)
 credentials = ""
 
 # GCS Configurations
-datalake_name                              = "dezoomcamp2023_capstone_project_datalake" // TODO
-datalake_region                            = "asia-south1"                              // TODO
+datalake_name                              = "yelposphere2_capstone_project_datalake" // TODO
+datalake_region                            = "europe-central2"                              // TODO
 datalake_storage_class                     = "STANDARD"
 datalake_uniform_bucket_level_access       = true
 datalake_public_access_prevention          = "enforced"
@@ -22,12 +22,12 @@ ingest_users_data_script_path              = "../spark_jobs/ingest_users_data.py
 # BigQuery Configurations
 bigquery_staging_dataset_name                       = "staging"
 bigquery_staging_dataset_description                = "Stores staging tables for yelp."
-bigquery_staging_dataset_region                     = "asia-south1" // TODO
+bigquery_staging_dataset_region                     = "europe-central2" // TODO
 bigquery_staging_dataset_delete_contents_on_destroy = true
 
 bigquery_dbt_dataset_name                       = "yelp_dbt"
 bigquery_dbt_dataset_description                = "Stores dbt models"
-bigquery_dbt_dataset_region                     = "asia-south1" // TODO
+bigquery_dbt_dataset_region                     = "europe-central2" // TODO
 bigquery_dbt_dataset_delete_contents_on_destroy = true
 
 bigquery_staging_business_table_name                = "stg_businesses"
@@ -59,7 +59,7 @@ bigquery_staging_users_table_schema_filepath     = "modules/bigquery/schemas/use
 # Dataproc Configurations
 
 dataproc_cluster_name                  = "yelp-preprocess-prod"
-dataproc_cluster_region                = "asia-south1"          // TODO
+dataproc_cluster_region                = "europe-central2"          // TODO
 dataproc_graceful_decommission_timeout = "120s"
 dataproc_master_num_instances          = 1
 dataproc_master_machine_type           = "e2-standard-2"
@@ -72,8 +72,8 @@ dataproc_worker_boot_disk_size_gb      = 30
 dataproc_image_version                 = "2.1.4-ubuntu20"
 dataproc_allow_zero_workers            = "true"
 
-dataproc_staging_bucket_name                              = "zoomcampdataprocstagingbucket2023" // TODO
-dataproc_staging_bucket_region                            = "asia-south1"                       // TODO
+dataproc_staging_bucket_name                              = "yelposphere2dataprocstagingbucket2023" // TODO
+dataproc_staging_bucket_region                            = "europe-central2"                       // TODO
 dataproc_staging_bucket_storage_class                     = "STANDARD"
 dataproc_staging_bucket_uniform_bucket_level_access       = true
 dataproc_staging_bucket_public_access_prevention          = "enforced"
@@ -81,8 +81,8 @@ dataproc_staging_bucket_lifecycle_rule_action             = "Delete"
 dataproc_staging_bucket_lifecycle_rule_condition_age_days = 30
 dataproc_staging_bucket_force_destroy                     = true
 
-dataproc_temp_bucket_name                              = "zoomcampdataproctempbucket2023" // TODO
-dataproc_temp_bucket_region                            = "asia-south1"                    // TODO
+dataproc_temp_bucket_name                              = "yelposphere2dataproctempbucket2023" // TODO
+dataproc_temp_bucket_region                            = "europe-central2"                    // TODO
 dataproc_temp_bucket_storage_class                     = "STANDARD"
 dataproc_temp_bucket_uniform_bucket_level_access       = true
 dataproc_temp_bucket_public_access_prevention          = "enforced"
@@ -91,10 +91,10 @@ dataproc_temp_bucket_lifecycle_rule_condition_age_days = 30
 dataproc_temp_bucket_force_destroy                     = true
 
 # Cloud Composer Configuration
-composer_env_name              = "dzacmp2023" // TODO
+composer_env_name              = "yelposphere2composer" // TODO
 composer_region                = "us-central1"
 compose_image_version          = "composer-2-airflow-2"
-composer_service_account_email = "aditya@dtc-de-zoomcamp-2023.iam.gserviceaccount.com" // TODO
+composer_service_account_email = "manual-service-account@yelposphere2.iam.gserviceaccount.com" // TODO
 composer_environment_size      = "ENVIRONMENT_SIZE_SMALL"
 scheduler_cpu                  = 0.5
 scheduler_memory_gb            = 1.875
